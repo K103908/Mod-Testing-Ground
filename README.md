@@ -1,2 +1,3 @@
 # mindustry-resource
-My first mod, rate fairly, and give feekback.
+just me messing around with this
+
