@@ -1,7 +1,7 @@
 const solarflare = new LaserTurret("solarflare");
 
 
-solarflare.shootType = extend(BulletType{
+solarflare.shootType = extend(BulletType, {
     Color tmpColor = new Color();
     colors = {Color.valueOf("e6c04555"), Color.valueOf("f7d95eaa"), Color.valueOf("ffec6e"), Color.white};
     tscales = {1, 0.7, 0.5, 0.2};
