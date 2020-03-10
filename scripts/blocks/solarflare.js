@@ -18,29 +18,29 @@ solarflare.shootType = extend(BulletType, {
         pierce = true;
     }
     
-    public void update(Bullet b){
-        if(b.timer.get(1, 5f)){
+    update(Bullet b){
+        if(b.timer.get(1, 5)){
             Damage.collideLine(b, b.getTeam(), hitEffect, b.x, b.y, b.rot(), length, true);
         }
-        Effects.shake(1f, 1f, b.x, b.y);
+        Effects.shake(1, 1, b.x, b.y);
     }
     
-    public void hit(Bullet b, float hitx, float hity){
+    hit(Bullet b, float hitx, float hity){
         Effects.effect(hitEffect, colors[2], hitx, hity);
         if(Mathf.chance(0.4)){
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
+            Fire.create(world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
         }
     }
     
-    public void draw(Bullet b){
+    draw(Bullet b){
         float baseLen = (length) * b.fout();
 
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
         for(int s = 0; s < colors.length; s++){
             Draw.color(tmpColor.set(colors[s]).mul(1f + Mathf.absin(Time.time(), 1f, 0.1f)));
             for(int i = 0; i < tscales.length; i++){
-                Tmp.v1.trns(b.rot() + 180f, (lenscales[i] - 1f) * 35f);
-                Lines.stroke((9f + Mathf.absin(Time.time(), 0.8f, 1.5f)) * b.fout() * strokes[s] * tscales[i]);
+                Tmp.v1.trns(b.rot() + 180, (lenscales[i] - 1) * 35);
+                Lines.stroke((9 + Mathf.absin(Time.time(), 0.8, 1.5)) * b.fout() * strokes[s] * tscales[i]);
                 Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), baseLen * lenscales[i], CapStyle.none);
             }
         }
