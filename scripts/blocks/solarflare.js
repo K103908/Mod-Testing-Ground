@@ -7,7 +7,7 @@ solarflare.shootType = extend(BulletType, {
     tscales = {1, 0.7, 0.5, 0.2};
     strokes = {2, 1.5, 1, 0.3};
     lenscales = {1, 1.12, 1.15, 1.17};
-    float length = 560;
+    length = 560;
     
     {
         hitEffect = Fx.hitMeltdown;
@@ -18,21 +18,21 @@ solarflare.shootType = extend(BulletType, {
         pierce = true;
     }
     
-    update(Bullet b){
+    update(b){
         if(b.timer.get(1, 5)){
             Damage.collideLine(b, b.getTeam(), hitEffect, b.x, b.y, b.rot(), length, true);
         }
         Effects.shake(1, 1, b.x, b.y);
     }
     
-    hit(Bullet b, float hitx, float hity){
+    hit(b, float hitx, float hity){
         Effects.effect(hitEffect, colors[2], hitx, hity);
         if(Mathf.chance(0.4)){
             Fire.create(world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
         }
     }
     
-    draw(Bullet b){
+    draw(b){
         float baseLen = (length) * b.fout();
 
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
