@@ -3,10 +3,10 @@ const solarflare = new LaserTurret("solarflare");
 
 solarflare.shootType = extend(BulletType, {
     Color tmpColor = new Color();
-    colors = {Color.valueOf("e6c04555"), Color.valueOf("f7d95eaa"), Color.valueOf("ffec6e"), Color.white};
-    tscales = {1, 0.7, 0.5, 0.2};
-    strokes = {2, 1.5, 1, 0.3};
-    lenscales = {1, 1.12, 1.15, 1.17};
+    colors = [Color.valueOf("e6c04555"), Color.valueOf("f7d95eaa"), Color.valueOf("ffec6e"), Color.white];
+    tscales = [1, 0.7, 0.5, 0.2];
+    strokes = [2, 1.5, 1, 0.3];
+    lenscales = [1, 1.12, 1.15, 1.17];
     length = 560;
     
     {
@@ -25,7 +25,7 @@ solarflare.shootType = extend(BulletType, {
         Effects.shake(1, 1, b.x, b.y);
     }
     
-    hit(b, float hitx, float hity){
+    hit(b, var hitx, var hity){
         Effects.effect(hitEffect, colors[2], hitx, hity);
         if(Mathf.chance(0.4)){
             Fire.create(world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
@@ -33,7 +33,7 @@ solarflare.shootType = extend(BulletType, {
     }
     
     draw(b){
-        float baseLen = (length) * b.fout();
+        var baseLen = (length) * b.fout();
 
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
         for(int s = 0; s < colors.length; s++){
