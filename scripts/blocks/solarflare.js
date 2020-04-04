@@ -8,15 +8,13 @@ const solarflare.shootType = extendContent(meltdownLaser, "solar-beam", {
         this.strokes = [2, 1.5, 1, 0.3];
         this.lenscales = [1, 1.12, 1.15, 1.17];
         this.length = 560;
-    },
-    
-    {
-        this.hitEffect = Fx.hitMeltdown;
-        this.damage = 2;
-        this.despawnEffect = Fx.none;
-        this.hitSize = 4;
-        this.drawSize = 420;
-        this.lifetime = 16;
-        this.pierce = true;
     }
 });
+
+solarflare.shootType.hitEffect = Fx.hitMeltdown;
+solarflare.shootType.damage = 2;
+solarflare.shootType.despawnEffect = Fx.none;
+solarflare.shootType.hitSize = 4;
+solarflare.shootType.drawSize = 420;
+solarflare.shootType.lifetime = 16;
+solarflare.shootType.pierce = true;
