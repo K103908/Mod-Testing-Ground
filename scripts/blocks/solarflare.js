@@ -20,3 +20,11 @@ const solarflare.shootType = extend(meltdownLaser, {
         }
     }
 });
+
+solarflare.shootType.hitEffect = Fx.hitMeltdown;
+solarflare.shootType.despawnEffect = Fx.none;
+solarflare.shootType.damage = 1;
+solarflare.shootType.hitSize = 4;
+solarflare.shootType.lifetime = 16;
+solarflare.shootType.drawSize = 420;
+solarflare.shootType.pierce = true;
