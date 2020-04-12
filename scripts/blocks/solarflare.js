@@ -8,16 +8,6 @@ const solarflare.shootType = extend(meltdownLaser, {
         this.strokes = [2, 1.5, 1, 0.3];
         this.lenscales = [1, 1.12, 1.15, 1.17];
         this.length = 560;
-        
-        {
-            this.hitEffect = Fx.hitMeltdown;
-            this.despawnEffect = Fx.none;
-            this.damage = 2;
-            this.hitSize = 4;
-            this.drawSize = 420;
-            this.lifetime = 16
-            this.pierce = true;
-        }
     }
 });
 
