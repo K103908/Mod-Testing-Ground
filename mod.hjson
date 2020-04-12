@@ -2,11 +2,11 @@ name: Testing Ground
 displayName: "[gold]Mod [red]Testing [blue]Ground"
 author:
   '''
-  [red]K103908 
+  [yellow]MEEP of Faith
   '''
 description:
   '''
-  Just a testing mod, might have twitchy things
+  Just a testing mod, nothing in here works properly.
   '''
-version: 0.11
+version: 0.12
 minGameVersion: 103
