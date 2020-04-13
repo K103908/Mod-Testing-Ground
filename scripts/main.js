@@ -1,1 +1,1 @@
-require("blocks/solarflare")
+require("blocks/solar-flare")
