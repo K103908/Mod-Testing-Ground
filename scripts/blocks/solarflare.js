@@ -1,11 +1,11 @@
 const solarflare = new LaserTurret("solarflare");
 
 const solarflare.shootType = extend(meltdownLaser, {
-    var colors = [e6c04555, f7d95eaa, ffec6e, ffffff];
-    var tscales = [1, 0.7, 0.5, 0.2];
-    var strokes = [2, 1.5, 1, 0.3];
-    var lenscales = [1, 1.12, 1.15, 1.17];
-    var length = 560;
+    this.colors = [e6c04555, f7d95eaa, ffec6e, ffffff];
+    this.tscales = [1, 0.7, 0.5, 0.2];
+    this.strokes = [2, 1.5, 1, 0.3];
+    this.lenscales = [1, 1.12, 1.15, 1.17];
+    this.length = 560;
 });
 
 solarflare.shootType.hitEffect = Fx.hitMeltdown;
