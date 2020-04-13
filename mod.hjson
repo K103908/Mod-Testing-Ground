@@ -6,7 +6,7 @@ author:
   '''
 description:
   '''
-  Just a testing mod, nothing in here works properly.
+  Just a testing mod, nothing in here will work properly.
   '''
-version: 0.22
+version: 0.24
 minGameVersion: 103
