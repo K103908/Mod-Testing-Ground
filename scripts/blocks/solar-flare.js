@@ -20,9 +20,6 @@ solarflare.shootType = extend(BasicBulletType, {
     hit(b,hitx,hity){
         Effects.effect(Fx.hitMeltdown, colors[2], hitx, hity);
         if(Mathf.chance(0.8)){
-            //TRIPLE FLAMES BURNY BURN
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
             Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
         }
     },
