@@ -1,7 +1,7 @@
 const solarflare = new LaserTurret("solarflare");
 
 const solarflare.shootType = extend(meltdownLaser, {
-    var colors = [Color.valueOf("e6c04555"), Color.valueOf("f7d95eaa"), Color.valueOf("ffec6e"), Color.white];
+    var colors = [e6c04555, f7d95eaa, ffec6e, ffffff];
     var tscales = [1, 0.7, 0.5, 0.2];
     var strokes = [2, 1.5, 1, 0.3];
     var lenscales = [1, 1.12, 1.15, 1.17];
