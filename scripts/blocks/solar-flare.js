@@ -11,10 +11,11 @@ var length = 560;
 solarflare.shootType = extend(BasicBulletType, {
     init(b){
         if (b == null) return;
-        if (b.timer.get(1, 5)){
+        /*if (b.timer.get(1, 5)){
             //Look in damage.java for how this works, it's simular to lightning.
             Damage.collideLine(b, b.getTeam(), Fx.hitMeltdown, b.x, b.y, b.rot(), length, true);
-        }
+        }*/
+        Damage.collideLine(b, b.getTeam(), Fx.hitMeltdown, b.x, b.y, b.rot(), length, true);
         Effects.shake(1, 1, b.x, b.y);
     },
     hit(b,hitx,hity){
