@@ -12,19 +12,13 @@ solarflare.shootType = extend(BasicBulletType, {
     init(b){
         if (b == null) return;
         if (b.timer.get(1, 5)){
-            //Look in damage.java for how this works, it's simular to lightning.
             Damage.collideLine(b, b.getTeam(), Fx.hitMeltdown, b.x, b.y, b.rot(), length, true);
         }
+        //Look in damage.java for how this works, it's simular to lightning.
         Effects.shake(1, 1, b.x, b.y);
     },
     hit(b,hitx,hity){
         Effects.effect(Fx.hitMeltdown, colors[2], hitx, hity);
-        if(Mathf.chance(0.8)){
-            //TRIPLE FLAMES BURNY BURN
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
-            Fire.create(world.tileWorld(hitx + Mathf.range(5f), hity + Mathf.range(5f)));
-        }
     },
     draw(b){
         baseLen = (length) * b.fout();
