@@ -1,6 +1,8 @@
 //Large amounts of code copied from laser-interceptor.js from younggam/more-powerful-units.
 const solarflare = new LaserTurret("solar-flare");
 
+solarflare.consumes.add(new ConsumeLiquidFilter(boolf(liquid=>liquid.temperature<=0.5&&liquid.flammability<0.1),/*amount per tick*/0.5)).update(false);
+
 var tmpColor = new Color();
 var colors = [Color.valueOf("e6c04555"), Color.valueOf("f7d95eaa"), Color.valueOf("ffec6e"), Color.white];
 var tscales = [1, 0.7, 0.5, 0.2];
