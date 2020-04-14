@@ -19,9 +19,6 @@ solarflare.shootType = extend(BasicBulletType, {
         }
         Effects.shake(1, 1, b.x, b.y);
     },
-    hit(b,hitx,hity){
-        Effects.effect(this.hitEffect,this.colors[2],hitx!=null?hitx:b.x,hity!=null?hity:b.y);
-    },
     draw(b){
         baseLen = (length) * b.fout();
 
