@@ -46,3 +46,9 @@ solarflare.shootType.pierce = true;
 solarflare.shootType.incendChance = 0.8;
 solarflare.shootType.incendSpread = 20;
 solarflare.shootType.incendAmount = 5;
+
+corn = new StatusEffect("the-sun-is-a-deadly-laser");
+corn.damage = 500;
+corn.effect = Fx.burning;
+corn.armorMultiplier = 0.6;
+solarflare.shootType.status = corn
