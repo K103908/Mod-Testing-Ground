@@ -45,4 +45,4 @@ solarflare.shootType.drawSize = 420;
 solarflare.shootType.pierce = true;
 solarflare.shootType.incendChance = 0.8;
 solarflare.shootType.incendSpread = 20;
-solarflare.shootType.incendAmmount = 5;
+solarflare.shootType.incendAmount = 5;
