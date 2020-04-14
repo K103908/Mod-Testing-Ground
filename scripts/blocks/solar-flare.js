@@ -21,6 +21,12 @@ solarflare.shootType = extend(BasicBulletType, {
     },
     hit(b,hitx,hity){
         Effects.effect(this.hitEffect,Color.valueOf("f7d95e"),hitx!=null?hitx:b.x,hity!=null?hity:b.y);
+        if(Mathf.chance(0.8)){
+            //TRIPPLE BURNY BURN MWAHAHAHAHAHA
+            Fire.create(Vars.world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
+            Fire.create(Vars.world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
+            Fire.create(Vars.world.tileWorld(hitx + Mathf.range(5), hity + Mathf.range(5)));
+        }
     },
     draw(b){
         baseLen = (length) * b.fout();
@@ -45,9 +51,6 @@ solarflare.shootType.hitSize = 4;
 solarflare.shootType.lifetime = 16;
 solarflare.shootType.drawSize = 420;
 solarflare.shootType.pierce = true;
-solarflare.shootType.incendChance = 0.8;
-solarflare.shootType.incendSpread = 20;
-solarflare.shootType.incendAmount = 5;
 
 corn = new StatusEffect("the-sun-is-a-deadly-laser");
 corn.damage = 500;
