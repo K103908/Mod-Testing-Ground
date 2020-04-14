@@ -3,7 +3,7 @@ description: A cousin of the meltdown. Focused more on burning enemies than dama
 size: 4
 health: 3400
 range: 500
-reload: 80
+reload: 1
 shootSound: laserbig
 activeSound: beam
 activeSoundVolume: 2
