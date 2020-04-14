@@ -9,6 +9,7 @@ activeSound: beam
 activeSoundVolume: 2
 powerUse: 15
 rotatespeed: 0.5
+coolantMultiplier: 0.02
 shootCone: 35
 shootShake: 1.5
 targetAir: true

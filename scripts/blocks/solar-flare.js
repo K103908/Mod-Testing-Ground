@@ -9,7 +9,7 @@ var lenscales = [1, 1.12, 1.15, 1.17];
 var length = 560;
 
 solarflare.shootType = extend(BasicBulletType, {
-    init(b){
+    update(b){
         if (b == null) return;
         if (b.timer.get(1, 5)){
             //Look in damage.java for how this works, it's simular to lightning.
